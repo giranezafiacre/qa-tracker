@@ -34,3 +34,12 @@ Manual
 BLOCKED
 fiacre
 ---
+5
+testcase
+decrpt
+precon
+res
+Automated
+NOT_RUN
+C:\Users\fiacr\Desktop\qa-tracker\src\main\java\com\qatracker\App.java
+---
