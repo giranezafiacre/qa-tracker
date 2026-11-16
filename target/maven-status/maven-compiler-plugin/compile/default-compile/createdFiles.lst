@@ -1,0 +1,7 @@
+com\qatracker\App.class
+com\qatracker\storage\FileStorage.class
+com\qatracker\model\TestStatus.class
+com\qatracker\service\TestCaseManager.class
+com\qatracker\model\AutomatedTestCase.class
+com\qatracker\model\ManualTestCase.class
+com\qatracker\model\TestCase.class

@@ -1,0 +1,36 @@
+1
+t
+d
+p
+r
+Automated
+NOT_RUN
+C:\Users\fiacr\Desktop\qa-tracker\src\main\java\com\qatracker\App.java
+---
+2
+customer to login with invalid credentials
+customer should not be allowed to login with invalid credentials
+user should have access to login page
+the error message should be displayed
+Manual
+PASS
+fiacre
+---
+3
+t1
+d
+
+r
+Manual
+FAIL
+f
+---
+4
+blocked
+this task is blocked
+blocked page access
+the page will be blocked
+Manual
+BLOCKED
+fiacre
+---
