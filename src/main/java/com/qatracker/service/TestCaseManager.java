@@ -45,17 +45,14 @@ public class TestCaseManager {
         return null;
     }
 
-    public boolean updateStatus(int id, TestStatus newStatus) {
-
-        TestCase testCase = findById(id);
-
-        if (testCase == null) {
-            return false;
-        }
-
-        testCase.setStatus(newStatus);
-        return true;
-    }
+   public void updateTestStatus(int id, TestStatus status){
+      TestCase tcUpdate=findById(id);
+      if(tcUpdate!=null){
+        tcUpdate.setStatus(status);
+      }else{
+        System.out.println("status not found");
+      }
+   }
 
     public List<TestCase> search(String keyword) {
 

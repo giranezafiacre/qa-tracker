@@ -14,8 +14,8 @@ public abstract class TestCase implements Serializable {
     private TestStatus status;
 
     public TestCase(int id, String title,
-                    String description, String preconditions,
-                    String expectedResult) {
+            String description, String preconditions,
+            String expectedResult) {
 
         this.id = id;
         this.title = title;

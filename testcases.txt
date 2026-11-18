@@ -4,7 +4,7 @@ d
 p
 r
 Automated
-NOT_RUN
+BLOCKED
 C:\Users\fiacr\Desktop\qa-tracker\src\main\java\com\qatracker\App.java
 ---
 2

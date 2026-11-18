@@ -1,5 +1,6 @@
 package com.qatracker;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,10 +11,7 @@ import com.qatracker.model.TestStatus;
 import com.qatracker.service.TestCaseManager;
 import com.qatracker.storage.FileStorage;
 
-/**
- * Hello world!
- *
- */
+/* 
 public class App {
     private static Scanner scanner = new Scanner(System.in);
 
@@ -83,6 +81,9 @@ public class App {
         System.out.println("5. Generate Report");
         System.out.println("6. Save & Exit");
         System.out.println("==============================");
+        // TestCase t= new ManualTestCase(1,"titel","desc","prec","3333","Gloaria");
+        // System.out.println(t.getTitle());
+        
     }
 
     // Read an integer safely
@@ -282,7 +283,7 @@ public class App {
                 newStatus = TestStatus.NOT_RUN;
         }
 
-        manager.updateStatus(id, newStatus);
+        manager.updateTestStatus(id, newStatus);
 
         System.out.println("Test status updated successfully!");
     }
@@ -347,5 +348,19 @@ public class App {
         System.out.printf("Pass Rate        : %.1f%%%n", passRate);
 
         System.out.println("================================");
+    }
+}
+*/
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        for (int i=0; i<nums.length; i++){
+            for (int j=i+1;j<nums.length;j++){
+                if(nums[i]+nums[j]==target){
+                  return new int[]{i,j};
+                }
+            }
+        } 
+        return null;
     }
 }

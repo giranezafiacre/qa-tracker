@@ -22,30 +22,66 @@ A Java-based command-line application for managing software testing activities. 
 - Exception Handling
 - File I/O and Serialization
 - Git and GitHub
+- Cucumber Gherkin (`.feature` files) for test case documentation
 
 ## Project Structure
 
 ```text
 qa-tracker/
+├── .vscode/
+│
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── com/
+│   │           └── qatracker/
+│   │               ├── App.java
+│   │               ├── model/
+│   │               │   ├── TestCase.java
+│   │               │   ├── ManualTestCase.java
+│   │               │   ├── AutomatedTestCase.java
+│   │               │   └── TestStatus.java
+│   │               ├── service/
+│   │               │   └── TestCaseManager.java
+│   │               └── storage/
+│   │                   └── FileStorage.java
+│   │
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── qatracker/
+│
+├── testCases/
+│   ├── accountManagement/
+│   │   └── *.feature
+│   │
+│   ├── cartManagement/
+│   │   └── *.feature
+│   │
+│   ├── checkout/
+│   │   └── *.feature
+│   │
+│   └── productBrowsing/
+│       └── *.feature
+│
+├── target/                 # Maven-generated build files
 ├── pom.xml
 ├── README.md
-├── .gitignore
-└── src/
-    └── main/
-        └── java/
-            └── com/
-                └── qatracker/
-                    ├── App.java
-                    ├── model/
-                    │   ├── TestCase.java
-                    │   ├── ManualTestCase.java
-                    │   ├── AutomatedTestCase.java
-                    │   └── TestStatus.java
-                    ├── service/
-                    │   └── TestCaseManager.java
-                    └── storage/
-                        └── FileStorage.java
+└── .gitignore
 ```
+
+### Test Case Organization
+
+The project contains four main test sets, each containing multiple test cases documented using Gherkin `.feature` files.
+
+| Test Set | Folder | Description |
+|---|---|---|
+| 1 | `accountManagement/` | Account registration, login, and account management |
+| 2 | `cartManagement/` | Shopping cart functionality |
+| 3 | `checkout/` | Checkout and order processing |
+| 4 | `productBrowsing/` | Product catalogue and product details |
+
+Each `.feature` file can contain multiple scenarios, with each scenario representing an individual test case.
 
 ## Prerequisites
 
@@ -97,7 +133,8 @@ mvn clean compile exec:java
 
 ## Test Case Types
 
-**Manual Test Case**
+### Manual Test Case
+
 - Test ID
 - Title
 - Description
@@ -106,7 +143,8 @@ mvn clean compile exec:java
 - Tester Name
 - Execution Status
 
-**Automated Test Case**
+### Automated Test Case
+
 - Test ID
 - Title
 - Description
@@ -123,6 +161,25 @@ mvn clean compile exec:java
 | FAIL | Test did not meet the expected result |
 | BLOCKED | Test execution could not proceed |
 | NOT_RUN | Test has not yet been executed |
+
+## Test Case Documentation
+
+Test cases are documented using Gherkin syntax in `.feature` files.
+
+Example:
+
+```gherkin
+Feature: Customer Login
+
+  Background:
+    Given Customer is on the Login page
+
+  Scenario: Login with valid credentials
+    When Customer enters a valid username
+    And Customer enters a valid password
+    And Customer clicks the Login button
+    Then Customer should be redirected to the dashboard
+```
 
 ## Reporting
 
@@ -144,6 +201,8 @@ This project demonstrates practical application of:
 - Exception handling
 - File handling and data persistence
 - Modular Java application design
+- Software test case management and documentation
+- Gherkin-based test scenario writing
 
 ## Author
 
