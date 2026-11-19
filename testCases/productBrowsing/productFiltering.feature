@@ -3,7 +3,7 @@ Feature: Product Filtering
     I want to filter product by price, or category
     So that I can view products which match filtering
 
-    @positive
+    @positive @showcase
     Scenario Outline: Customer to filtering by price
        Given having access to the store, men, women, and accessories page.
        When customer Click on SLIDER BAR to set minimum price to <MinimumPrice>
