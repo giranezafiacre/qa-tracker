@@ -21,10 +21,9 @@ Feature: Customer Registration
 
 
         Examples:
-            | username | email_address | password | message
+            | username | email_address      | password      | message                                                                |
             | George123| geordger@gmail.com | 123Jumonkjo!  | Hello george123(not George Log Scenario Outline: Scenario Outline name)|
 
-#  Given->when->then (in any case we can't have "Given" /between "Given" and "then")
 
     Scenario Outline: Customer to Register with invalid credentials
         # Given Customer is on the "Registration" Page
@@ -37,5 +36,5 @@ Feature: Customer Registration
         But Customer should not be redirected to another page(postcondition)
 
         Examples:
-            | username | email_address | password | error_message
+            | username | email_address      | password      | error_message              |
             | George123| geordger@gmail.com | 123Jumonko!  | Invalid username or password|
