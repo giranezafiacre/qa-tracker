@@ -7,7 +7,7 @@ Feature: View Product Details
     
     @positive
     Scenario Outline: Customer to view Product Details
-        Given Customer is on the "order detail" Page
+        Given Customer is on the "product detail" Page
         When Customer clicked on <page> of product category
         When Customer click on product <product>
         Then System should redirect to selected <page> product category page
