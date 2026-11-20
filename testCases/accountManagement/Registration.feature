@@ -3,7 +3,7 @@ Feature: Customer Registration
     - Username should have atleast 6 characters
 
     Feature Description
-      As a Customer I sho....
+      As a Customer I should..
     Background: 
         Given Customer is on the "Registration" Page
 #   this is like common precondition
@@ -12,12 +12,12 @@ Feature: Customer Registration
     Scenario Outline: Customer to Register with valid credentials
 #  Given Customer is on the "Registration" Page
         When Customer enters <username>
-        When Customer enters <email_address>
-        When Customer enters <password>
-        When Customer clicks on "REGISTER" button
+        And Customer enters <email_address>
+        And Customer enters <password>
+        And Customer clicks on "REGISTER" button
         Then System should create a new account
-        Then System should redirect customer to Dashboard
-        Then System should display message as <message>
+        And System should redirect customer to Dashboard
+        And System should display message as <message>
 
 
         Examples:
