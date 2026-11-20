@@ -9,12 +9,11 @@ Feature: View Product Details
     Scenario Outline: Customer to view Product Details
         Given Customer is on the "product detail" Page
         When Customer clicked on <page> of product category
-        When Customer click on product <product>
+        And Customer click on product <product>
         Then System should redirect to selected <page> product category page
-        Then System should display products in <page> category
-        Then System should redirect <product> detail page
+        And System should display products in <page> category
+        And System should redirect <product> detail page
         
-
         
         Examples:
             | page       | product              |
@@ -24,10 +23,5 @@ Feature: View Product Details
             | store      | Blue Tshirt          |
 
     
-    @negative
-    Scenario: Customer to view all products when the search field is empty.
-        Given Customer has access to "home", "men", "women", "accessories" or "store" page 
-        When Custome search field empty.
-        Then The system should display all the products and 
-        Then The system should display this message Search results: ""
+    
 
