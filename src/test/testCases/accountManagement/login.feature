@@ -7,7 +7,7 @@ Feature: Login
 
     @negative
     Scenario Outline: System to reject login with invalid credentials
-        Given Customer has access to the "Login" Page
+        Given Customer has access to the Login Page
         When Customer enters username or email "<username_or_email>"
         When Customer enters password "<password>"
         When Customer clicks on "LOG IN" button
@@ -15,7 +15,6 @@ Feature: Login
         Then System should display the password in dots
         Then System should provide the error message "<error_message>"
         Then System should stay on the same page
-
 
         Examples:
             | username_or_email         | password      | error_message                                                                                                                 |
